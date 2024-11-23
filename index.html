@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Azama Matulezi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FFC300;
+            color: #1B1833;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: #441752;
+            color: #F29F58;
+            padding: 20px 10px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .animated-title {
+            font-size: 2.5em;
+            margin: 0;
+            background: linear-gradient(45deg, #f3ec78, #af4261, #f3ec78);
+            background-size: 400%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 5s linear infinite;
+            perspective: 1000px;
+            transform: translateZ(0);
+        }
+
+        @keyframes shine {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            padding: 5px 10px;
+            background-color: #ffffff;
+            color: #0B132B;
+            border-radius: 5px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+            text-align: center;
+        }
+
+        .logo {
+            max-width: 120px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding: 15px;
+            background-color: #560c0c;
+        }
+
+        nav a {
+            color: #1B1833;
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #441752;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover,
+        nav a:focus {
+            transform: scale(1.1);
+            color: #ffffff;
+            box-shadow: 0 0 10px #ffffff;
+        }
+
+        section {
+            padding: 40px 20px;
+            margin: 20px auto;
+            max-width: 1200px;
+            background-color: rgba(27, 24, 51, 0.9);
+            color: #F29F58;
+            border-radius: 8px;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease-in-out;
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .image-container {
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .image-container img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px #F29F58, 0 0 20px #F29F58;
+        }
+
+        .bagan {
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #1B1833;
+            padding: 20px;
+            margin: 10px auto;
+            border-radius: 8px;
+            max-width: 800px;
+            text-align: center;
+            box-shadow: 0 0 20px #F29F58, 0 0 30px #F29F58;
+        }
+
+        .separator {
+            margin: 20px auto;
+            height: 4px;
+            width: 80%;
+            background-color: red;
+            border-radius: 5px;
+            box-shadow: 0 0 10px red, 0 0 20px red;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease-in-out;
+        }
+
+        .separator.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .contact {
+            background-color: #1B1833;
+            color: #FFC300;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        footer {
+            background-color: #441752;
+            color: #F29F58;
+            text-align: center;
+            padding: 15px;
+        }
+
+        #about p {
+            color: #ffffff; /* Warna teks deskripsi diubah menjadi putih */
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            header .logo {
+                margin: 10px 0;
+            }
+
+            .animated-title {
+                font-size: 2em;
+            }
+
+            .image-container img {
+                max-width: 80%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="animated-title">Azama Matulezi</h1>
+        <div class="subtitle">CEO of Brunei</div>
+        <img class="logo" src="https://www.ipsgroupbv.com/wp-content/uploads/2019/06/Brunei_Shell.jpg" alt="Brunei Shell Logo">
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="image-container">
+            <img src="https://media.glassdoor.com/lst2x/10/15/6c/32/panorama-landscape-photo-of-brunei-shell-petroleum-hq.jpg" alt="Main Photo">
+            <img src="https://images-global.nhst.tech/image/eHZad2hXdjZ0MWhlYWpwMUpOWHdqWTRBNTd3Ympkekc0eDlHK090UTlnTT0=/nhst/binary/6e3c4af93616e1feefbe3684157c1329" alt="Left Photo">
+            <img src="https://bizclik-cms-prod.s3.eu-west-2.amazonaws.com/images/fx9wof13kabjgkhe-images/GettyImages-1127111637.jpeg" alt="Right Photo">
+        </div>
+        <p>Azama Matulezi, PhD, was born in 2000 in Bandar Seri Begawan, Brunei. From a young age, I displayed a deep curiosity for knowledge and creativity. Growing up in an environment that valued education, my childhood was filled with exploration, both academically and through extracurricular activities like arts and sports. My passion for science and business began to emerge during high school, where I actively participated in debate competitions, research projects, and small entrepreneurial ventures with friends.</p>
+
+        <p>After completing high school with outstanding achievements, I pursued higher education at Stanford University in the United States, where I earned a Bachelor’s degree in Energy Engineering. At Stanford, I delved into the world of technology as a driving force for innovation in the global energy sector. This experience sharpened my technical skills and broadened my perspective on how technology could be a catalyst for transformative change.</p>
+
+        <p>Following my undergraduate studies, I advanced to Columbia University in New York to earn a Master’s degree in International Business Management. The dynamic environment at Columbia provided me with profound insights into global business strategy, leadership, and cross-cultural collaboration skills that later became invaluable in my career journey. Upon completing my studies, I returned to Brunei and began my career at Brunei Shell. 
+            
+        <p>Through dedication, strategic vision, and strong leadership, I rose to the top position as the CEO of Brunei Shell, becoming one of the youngest leaders in the company’s history. Beyond the energy sector, I am also an entrepreneur with a deep passion for the fashion industry. I founded Azamais, a clothing brand that blends modern aesthetics with premium quality, as another channel to express my creativity and vision for reaching a global audience.
+            
+            Through this journey, I remain committed to making a positive impact across various sectors, whether by driving innovation in energy or building a brand that inspires people worldwide.
+        </p>
+    </section>
+
+    <div class="separator"></div>
+
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="bagan">CEO, Brunei Shell (2024)</div>
+        <div class="bagan">Operations Manager, Brunei Shell (2023)</div>
+        <div class="bagan">Technical Staff, Brunei Shell (2021-2022)</div>
+    </section>
+
+    <div class="separator"></div>
+
+    <section id="education">
+        <h2>Education</h2>
+        <div class="bagan">Stanford University (2016)</div>
+        <div class="bagan">Columbia University (2020)</div>
+    </section>
+
+    <div class="separator"></div>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="bagan">Project Management ⭐⭐⭐⭐</div>
+        <div class="bagan">Business Strategy ⭐⭐⭐⭐⭐</div>
+        <div class="bagan">Leadership ⭐⭐⭐⭐⭐</div>
+    </section>
+
+    <div class="separator"></div>
+
+    <section id="projects">
+        <h2>Recent Projects</h2>
+        <p>Some of my recent projects include:</p>
+        <div class="bagan">Renewable Energy Initiative</div>
+        <div class="bagan">Energy Efficiency Program</div>
+        <div class="bagan">Technology Development Project</div>
+    </section>
+
+    <div class="separator"></div>
+
+    <section id="contact" class="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:azama.matulezi@gmail.com" style="color: #FFC300;">azamamatulezi@gmail.com</a></p>
+        <p>Phone: +673 345 244 54</p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/azama-matulezi" style="color: #FFC300;">linkedin.com/in/azama-matulezi</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Azama Matulezi. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const sections = document.querySelectorAll('section, .separator');
+        const options = { threshold: 0.1 };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, options);
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+
+</html>
